@@ -176,8 +176,8 @@ tip.onclick = function () {
 
 
 
-// const copy = obj;
-// // copy.a = 10;
+// const copy = obj
+// copy.a = 10;
 // console.log(copy);
 // console.log(obj);
 
@@ -207,49 +207,49 @@ tip.onclick = function () {
 // console.log(numbers);
 // console.log(newNumbers);
 
-const add = {
-    d: 17,
-    e: 20
-};
+// const add = {
+//     d: 17,
+//     e: 20
+// }
 
-const clone = Object.assign({}, add);
+// const clone = Object.assign({}, add);
 
-clone.d = 20;
-console.log(add);
-console.log(clone);
+// clone.d = 20;
+// console.log(add);
+// console.log(clone);
 
-const oldArray = ["a", "b", "c"];
-const newArray = oldArray.slice();
+// const oldArray = ["a", "b", "c"];
+// const newArray = oldArray.slice();
 
-newArray[0] = 'ajsdasd';
+// newArray[0] = 'ajsdasd';
 
-console.log(oldArray);
-console.log(newArray);
+// console.log(oldArray);
+// console.log(newArray);
 
-const video = ['youtube', 'twitch', 'rutube'];
-const blogs = ['wordpress', 'livejournal', 'blogger'];
-const internet = [...video, ...blogs, 'vk', 'facebook'];
+// const video = ['youtube', 'twitch', 'rutube'];
+// const blogs = ['wordpress', 'livejournal', 'blogger'];
+// const internet = [...video, ...blogs, 'vk', 'facebook'];
 
-console.log(internet);
+// console.log(internet);
 
-function log(a, b, c) {
-    console.log(a);
-    console.log(b);
-    console.log(c);
-}
+// function log(a, b, c) {
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
 
-const num = [2, 5, 7];
+// const num = [2, 5, 7];
 
-log(...num);
+// log(...num);
 
-const array = ["a", "b"];
+// const array = ["a", "b"];
 
-const newAaray = [...array];
+// const newAaray = [...array];
 
-const q = {
-    one: 1,
-    two: 2
-};
+// const q = {
+//     one: 1,
+//     two: 2
+// };
 
-const newObj = { ...q };
-console.log(newObj);
+// const newObj = { ...q };
+// console.log(newObj);
