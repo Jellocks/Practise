@@ -1,32 +1,18 @@
 "use strict";
 
-let tip = document.querySelector('h1');
-tip.onclick = function () {
-    let numberOfFilms;
-
-    function start() {
-        numberOfFilms = +prompt('Cколько фильмов вы уже посмотрели?', '');
-        while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
-            numberOfFilms = +prompt('Cколько фильмов вы уже посмотрели?', '');
+const personalMovieDB = {
+    'count': 0,
+    'movies': {},
+    'actors': {},
+    'genres': [],
+    'privat': true,
+    "start": function () {
+        personalMovieDB.count = +prompt('Cколько фильмов вы уже посмотрели?', '');
+        while (personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count)) {
+            personalMovieDB.count = +prompt('Cколько фильмов вы уже посмотрели?', '');
         }
-    }
-    start();
-
-    const personalMovieDB = {
-        'count': numberOfFilms,
-        'movies': {},
-        'actors': {},
-        'genres': [],
-        'privat': true,
-
-    };
-
-
-
-
-
-
-    function rememberMyFilms() {
+    },
+    rememberMyFilms: function () {
         for (let i = 0; i < 2; i++) {
             const a = prompt('Какой последний фильм посмотрели?', '');
             const b = prompt('На сколько оцените его?', '');
@@ -40,10 +26,8 @@ tip.onclick = function () {
             }
 
         }
-    }
-    // rememberMyFilms();
-
-    function detectPersonalLevel() {
+    },
+    detectPersonalLevel: function () {
         for (let i = 0; i < 1; i++) {
             if (personalMovieDB.count < 10) {
                 prompt('Просмотрено довольно мало фильмов');
@@ -55,25 +39,38 @@ tip.onclick = function () {
                 prompt('ошибка');
             }
         }
-    }
-    // detectPersonalLevel();
-    function showMyDB(hidden) {
+    },
+    showMyDB: function (hidden) {
         if (!hidden) {
             console.log(personalMovieDB);
 
         }
-    }
-    showMyDB(personalMovieDB.privat);
+    },
+    toggleVisibleMyDB: function () {
+        if (personalMovieDB.privat) {
+            personalMovieDB.privat = false;
+        } else {
+            personalMovieDB.privat = true;
+        }
 
-    function writeYourGenres() {
-        for (let i = 1; i <= 3; i++) {
-            personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр ${i}`);
+    },
+    writeYourGenres: function () {
+        for (let i = 1; i < 2; i++) {
+            let genres = prompt(`Введите ваши любимые жанры через запятую`);
+            if (genres === "" || genres == null) {
+                console.log(`Вы ввели не те данные либо не ввели их вовсе`);
+            } else {
+                personalMovieDB.genres = genres.split(",");
+                personalMovieDB.genres.sort();
+            }
+
 
         }
+        personalMovieDB.genres.forEach((item, i) => {
+            console.log(`Любимый жанр${i + 1} -это ${item}`);
+        });
     }
-    writeYourGenres();
-}
-
+};
 // console.log(personalMovieDB);
 //деструктуризация
 // const opt = {
@@ -263,13 +260,13 @@ tip.onclick = function () {
 
 // console.dir([1, 2, 3]);
 
-const soldier = {
-    health: 400,
-    armor: 100,
-    sayHello: function () {
-        console.log("Hello");
-    }
-};
+// const soldier = {
+//     health: 400,
+//     armor: 100,
+//     sayHello: function () {
+//         console.log("Hello");
+//     }
+// };
 
 // const john = {
 //     health: 100,
