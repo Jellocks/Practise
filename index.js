@@ -67,8 +67,19 @@ const personalMovieDB = {
 
         }
         personalMovieDB.genres.forEach((item, i) => {
-            console.log(`Любимый жанр${i + 1} -это ${item}`);
+            console.log(`Любимый жанр${i + 1} - это ${item}`);
         });
+
+
+
+
+
+
+
+
+
+
+
     }
 };
 // console.log(personalMovieDB);
@@ -280,3 +291,29 @@ const personalMovieDB = {
 // const john = Object.create(soldier);
 
 // john.sayHello();
+// динамическая типизация js(переход от одного типа данных в другой)
+
+const num = 5;
+
+console.log("http://vk.com/catalog/" + num);
+
+// to Number
+// замыкание и лексическое окружение
+
+function createCounter() {
+    let counter = 0;
+    const myFunction = function () {
+        debugger
+        counter = counter + 1; debugger
+        return counter; debugger
+    }
+    return myFunction;
+}
+
+const increment = createCounter(); debugger
+
+const c1 = increment(); debugger
+const c2 = increment(); debugger
+const c3 = increment(); debugger
+
+console.log(c1, c2, c3);
