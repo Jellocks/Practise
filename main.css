@@ -1,0 +1,12 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%;
+}

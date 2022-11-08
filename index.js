@@ -1,87 +1,75 @@
 "use strict";
 
-const personalMovieDB = {
-    'count': 0,
-    'movies': {},
-    'actors': {},
-    'genres': [],
-    'privat': true,
-    "start": function () {
-        personalMovieDB.count = +prompt('Cколько фильмов вы уже посмотрели?', '');
-        while (personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count)) {
-            personalMovieDB.count = +prompt('Cколько фильмов вы уже посмотрели?', '');
-        }
-    },
-    rememberMyFilms: function () {
-        for (let i = 0; i < 2; i++) {
-            const a = prompt('Какой последний фильм посмотрели?', '');
-            const b = prompt('На сколько оцените его?', '');
+// const personalMovieDB = {
+//     'count': 0,
+//     'movies': {},
+//     'actors': {},
+//     'genres': [],
+//     'privat': true,
+//     "start": function () {
+//         personalMovieDB.count = +prompt('Cколько фильмов вы уже посмотрели?', '');
+//         while (personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count)) {
+//             personalMovieDB.count = +prompt('Cколько фильмов вы уже посмотрели?', '');
+//         }
+//     },
+//     rememberMyFilms: function () {
+//         for (let i = 0; i < 2; i++) {
+//             const a = prompt('Какой последний фильм посмотрели?', '');
+//             const b = prompt('На сколько оцените его?', '');
 
-            if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-                personalMovieDB.movies[a] = b;
-                console.log('принято');
-            } else {
-                console.log('отказ');
-                i--;
-            }
+//             if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+//                 personalMovieDB.movies[a] = b;
+//                 console.log('принято');
+//             } else {
+//                 console.log('отказ');
+//                 i--;
+//             }
 
-        }
-    },
-    detectPersonalLevel: function () {
-        for (let i = 0; i < 1; i++) {
-            if (personalMovieDB.count < 10) {
-                prompt('Просмотрено довольно мало фильмов');
-            } else if (personalMovieDB.count > 10 && personalMovieDB.count < 30) {
-                prompt('Вы классический зритель');
-            } else if (personalMovieDB.count > 30) {
-                prompt('Вы киноман');
-            } else {
-                prompt('ошибка');
-            }
-        }
-    },
-    showMyDB: function (hidden) {
-        if (!hidden) {
-            console.log(personalMovieDB);
+//         }
+//     },
+//     detectPersonalLevel: function () {
+//         for (let i = 0; i < 1; i++) {
+//             if (personalMovieDB.count < 10) {
+//                 prompt('Просмотрено довольно мало фильмов');
+//             } else if (personalMovieDB.count > 10 && personalMovieDB.count < 30) {
+//                 prompt('Вы классический зритель');
+//             } else if (personalMovieDB.count > 30) {
+//                 prompt('Вы киноман');
+//             } else {
+//                 prompt('ошибка');
+//             }
+//         }
+//     },
+//     showMyDB: function (hidden) {
+//         if (!hidden) {
+//             console.log(personalMovieDB);
 
-        }
-    },
-    toggleVisibleMyDB: function () {
-        if (personalMovieDB.privat) {
-            personalMovieDB.privat = false;
-        } else {
-            personalMovieDB.privat = true;
-        }
+//         }
+//     },
+//     toggleVisibleMyDB: function () {
+//         if (personalMovieDB.privat) {
+//             personalMovieDB.privat = false;
+//         } else {
+//             personalMovieDB.privat = true;
+//         }
 
-    },
-    writeYourGenres: function () {
-        for (let i = 1; i < 2; i++) {
-            let genres = prompt(`Введите ваши любимые жанры через запятую`);
-            if (genres === "" || genres == null) {
-                console.log(`Вы ввели не те данные либо не ввели их вовсе`);
-            } else {
-                personalMovieDB.genres = genres.split(",");
-                personalMovieDB.genres.sort();
-            }
-
-
-        }
-        personalMovieDB.genres.forEach((item, i) => {
-            console.log(`Любимый жанр${i + 1} - это ${item}`);
-        });
+//     },
+//     writeYourGenres: function () {
+//         for (let i = 1; i < 2; i++) {
+//             let genres = prompt(`Введите ваши любимые жанры через запятую`);
+//             if (genres === "" || genres == null) {
+//                 console.log(`Вы ввели не те данные либо не ввели их вовсе`);
+//             } else {
+//                 personalMovieDB.genres = genres.split(",");
+//                 personalMovieDB.genres.sort();
+//             }
 
 
+//         }
+//         personalMovieDB.genres.forEach((item, i) => {
+//             console.log(`Любимый жанр${i + 1} - это ${item}`);
+//         });
 
-
-
-
-
-
-
-
-
-    }
-};
 // console.log(personalMovieDB);
 //деструктуризация
 // const opt = {
@@ -293,27 +281,37 @@ const personalMovieDB = {
 // john.sayHello();
 // динамическая типизация js(переход от одного типа данных в другой)
 
-const num = 5;
+// const num = 5;
 
-console.log("http://vk.com/catalog/" + num);
+// console.log("http://vk.com/catalog/" + num);
 
-// to Number
-// замыкание и лексическое окружение
+// // to Number
+// // замыкание и лексическое окружение
 
-function createCounter() {
-    let counter = 0;
-    const myFunction = function () {
-        debugger
-        counter = counter + 1; debugger
-        return counter; debugger
-    }
-    return myFunction;
-}
+// function createCounter() {
+//     let counter = 0;
+//     const myFunction = function () {
+//         debugger
+//         counter = counter + 1; debugger
+//         return counter; debugger
+//     }
+//     return myFunction;
+// }
 
-const increment = createCounter(); debugger
+// const increment = createCounter(); debugger
 
-const c1 = increment(); debugger
-const c2 = increment(); debugger
-const c3 = increment(); debugger
+// const c1 = increment(); debugger
+// const c2 = increment(); debugger
+// const c3 = increment(); debugger
 
-console.log(c1, c2, c3);
+// console.log(c1, c2, c3);
+
+const active = document.getElementById('box');
+console.log(box);
+const buttons = document.getElementsByTagName('button');
+console.log(buttons[1]);
+let circles = document.querySelectorAll(".circle");
+console.log(circles);
+circles.forEach(item => {
+    console.log(item);
+})
