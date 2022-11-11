@@ -306,12 +306,24 @@
 
 // console.log(c1, c2, c3);
 
-const active = document.getElementById('box');
-console.log(box);
-const buttons = document.getElementsByTagName('button');
-console.log(buttons[1]);
-let circles = document.querySelectorAll(".circle");
-console.log(circles);
-circles.forEach(item => {
-    console.log(item);
-})
+// const box = document.getElementById('box');
+// const buttons = document.getElementsByTagName('button');
+// let circles = document.querySelectorAll(".circle");
+// let circle = document.querySelector(".circle");
+// let wrapper = document.querySelector(".wrapper");
+
+// circles.forEach(item => {
+//     item.style.backgroundColor = "blue";
+// });
+
+// const div = document.createElement('div');
+// // const text = document.createElement("Hello");
+// div.classList.add("black");
+// document.body.append(div);
+// // circles[0].remove();
+// // circles[0].replaceWith(box);
+// div.innerHTML = "<h1>Hello world</h1>";
+// div.insertAdjacentHTML("beforeend", "<h2>Hello</h2>")
+// console.log(div);
+
+//практика с элементами на странице

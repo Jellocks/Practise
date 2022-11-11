@@ -10,3 +10,17 @@
     background: red;
     border-radius: 50%;
 }
+
+.box {
+    width: 200px;
+    height: 100px;
+    background: red;
+}
+
+.black {
+    width: 200px;
+    height: 100px;
+    background: black;
+    color: white;
+    text-align: center;
+}
